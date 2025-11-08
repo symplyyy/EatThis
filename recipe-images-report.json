@@ -1,0 +1,396 @@
+{
+  "generatedAt": "2025-11-08T20:21:40.397Z",
+  "stats": {
+    "total": 106,
+    "withImage": 106,
+    "withoutImage": 0,
+    "potentiallyWrong": [
+      {
+        "id": 5,
+        "title": "Pâtes aux champignons",
+        "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 6,
+        "title": "Riz à la tomate",
+        "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 7,
+        "title": "Riz au beurre",
+        "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 8,
+        "title": "Riz aux œufs",
+        "currentImage": "https://images.unsplash.com/photo-1611859266236-9c81194a6d0e?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 15,
+        "title": "Pommes de terre sautées",
+        "currentImage": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 16,
+        "title": "Pommes de terre à l'eau",
+        "currentImage": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 21,
+        "title": "Sandwich jambon-beurre",
+        "currentImage": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 22,
+        "title": "Sandwich au fromage",
+        "currentImage": "https://images.unsplash.com/photo-1618164436269-4460e6f1f1e6?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 23,
+        "title": "Sandwich thon-mayonnaise",
+        "currentImage": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 24,
+        "title": "Soupe de légumes",
+        "currentImage": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 25,
+        "title": "Soupe à la tomate",
+        "currentImage": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 26,
+        "title": "Gratin de pommes de terre",
+        "currentImage": "https://images.unsplash.com/photo-1572441713132-51c75654db73?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1574672290893-f761799b5447?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 27,
+        "title": "Gratin de pâtes",
+        "currentImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1574672290893-f761799b5447?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 31,
+        "title": "Pâtes aux champignons",
+        "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 32,
+        "title": "Riz aux légumes",
+        "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 33,
+        "title": "Riz au poulet",
+        "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 38,
+        "title": "Risotto aux champignons",
+        "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 41,
+        "title": "Curry de légumes",
+        "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 43,
+        "title": "Bolognaise",
+        "currentImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1598515214211-89d3c73fd4f6?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 46,
+        "title": "Tacos",
+        "currentImage": "https://images.unsplash.com/photo-1565299585323-38174c0c0e8a?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 60,
+        "title": "Riz cantonais",
+        "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 62,
+        "title": "Soupe miso",
+        "currentImage": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 63,
+        "title": "Sushi",
+        "currentImage": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 64,
+        "title": "Ramen",
+        "currentImage": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 82,
+        "title": "Massaman curry",
+        "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 83,
+        "title": "Green curry",
+        "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 84,
+        "title": "Red curry",
+        "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 85,
+        "title": "Yellow curry",
+        "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 90,
+        "title": "Pancakes",
+        "currentImage": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 94,
+        "title": "Crêpes",
+        "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 95,
+        "title": "Crêpes sucrées",
+        "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      },
+      {
+        "id": 96,
+        "title": "Crêpes salées",
+        "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+        "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+      }
+    ]
+  },
+  "recipes": [
+    {
+      "id": 5,
+      "title": "Pâtes aux champignons",
+      "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 6,
+      "title": "Riz à la tomate",
+      "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 7,
+      "title": "Riz au beurre",
+      "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 8,
+      "title": "Riz aux œufs",
+      "currentImage": "https://images.unsplash.com/photo-1611859266236-9c81194a6d0e?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 15,
+      "title": "Pommes de terre sautées",
+      "currentImage": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 16,
+      "title": "Pommes de terre à l'eau",
+      "currentImage": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 21,
+      "title": "Sandwich jambon-beurre",
+      "currentImage": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 22,
+      "title": "Sandwich au fromage",
+      "currentImage": "https://images.unsplash.com/photo-1618164436269-4460e6f1f1e6?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 23,
+      "title": "Sandwich thon-mayonnaise",
+      "currentImage": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 24,
+      "title": "Soupe de légumes",
+      "currentImage": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 25,
+      "title": "Soupe à la tomate",
+      "currentImage": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 26,
+      "title": "Gratin de pommes de terre",
+      "currentImage": "https://images.unsplash.com/photo-1572441713132-51c75654db73?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1574672290893-f761799b5447?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 27,
+      "title": "Gratin de pâtes",
+      "currentImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1574672290893-f761799b5447?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 31,
+      "title": "Pâtes aux champignons",
+      "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 32,
+      "title": "Riz aux légumes",
+      "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 33,
+      "title": "Riz au poulet",
+      "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 38,
+      "title": "Risotto aux champignons",
+      "currentImage": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 41,
+      "title": "Curry de légumes",
+      "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 43,
+      "title": "Bolognaise",
+      "currentImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1598515214211-89d3c73fd4f6?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 46,
+      "title": "Tacos",
+      "currentImage": "https://images.unsplash.com/photo-1565299585323-38174c0c0e8a?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 60,
+      "title": "Riz cantonais",
+      "currentImage": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 62,
+      "title": "Soupe miso",
+      "currentImage": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 63,
+      "title": "Sushi",
+      "currentImage": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 64,
+      "title": "Ramen",
+      "currentImage": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 82,
+      "title": "Massaman curry",
+      "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 83,
+      "title": "Green curry",
+      "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 84,
+      "title": "Red curry",
+      "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 85,
+      "title": "Yellow curry",
+      "currentImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 90,
+      "title": "Pancakes",
+      "currentImage": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 94,
+      "title": "Crêpes",
+      "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 95,
+      "title": "Crêpes sucrées",
+      "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      "id": 96,
+      "title": "Crêpes salées",
+      "currentImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+      "suggestedImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80"
+    }
+  ]
+}
