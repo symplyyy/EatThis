@@ -5,14 +5,23 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'via.placeholder.com',
       },
       {
-        protocol: 'http',
-        hostname: '**',
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
       },
     ],
+    // Optimisation pour Vercel
+    formats: ['image/avif', 'image/webp'],
   },
+  // Optimisation pour Vercel
+  compress: true,
+  poweredByHeader: false,
 }
 
 module.exports = nextConfig

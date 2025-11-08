@@ -4,7 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Clock, ChefHat, ImageIcon, HelpCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Clock, ChefHat, ImageIcon, HelpCircle, Heart, ShoppingCart } from 'lucide-react'
+import { convertToPlaceholder } from '@/lib/utils'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useShoppingList } from '@/hooks/useShoppingList'
 import type { RecipeCard as RecipeCardType } from '@/lib/types'
 
 interface RecipeCardProps {
@@ -25,14 +29,47 @@ const difficultyColors = {
 
 export function RecipeCard({ recipe }: RecipeCardProps) {
   const [showTooltip, setShowTooltip] = useState(false)
+  const { isFavorite, toggleFavorite } = useFavorites()
+  const { addItems } = useShoppingList()
   const isComplete = recipe.missing === 0
+  const favorite = isFavorite(recipe.id)
+
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    toggleFavorite(recipe.id)
+  }
+
+  const handleAddToShoppingList = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (recipe.missingIngredients && recipe.missingIngredients.length > 0) {
+      addItems(recipe.missingIngredients, recipe.id, recipe.title)
+    }
+  }
 
   return (
     <Card className="group h-full flex flex-col overflow-hidden relative border border-border/50 hover:border-primary/30 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out">
       <Link href={`/r/${recipe.id}`} className="block h-full flex flex-col touch-manipulation">
         <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl bg-muted group-hover:shadow-lg transition-shadow duration-300 ease-in-out">
+          {/* Bouton Favori */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-3 right-3 z-20 h-9 w-9 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-300 ease-in-out shadow-lg"
+            onClick={handleFavoriteClick}
+          >
+            <Heart 
+              className={`h-5 w-5 transition-all duration-300 ease-in-out ${
+                favorite 
+                  ? 'fill-red-500 text-red-500 scale-110' 
+                  : 'text-muted-foreground hover:text-red-500'
+              }`}
+            />
+          </Button>
+          
           {isComplete && (
-            <div className="absolute top-3 right-3 z-10 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1">
+            <div className="absolute top-3 left-3 z-10 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1">
               <span>✓</span>
               <span>Tous les ingrédients</span>
             </div>
@@ -43,23 +80,26 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
               <span>Rapide</span>
             </div>
           )}
-          {recipe.imageUrl ? (
-            <Image
-              src={recipe.imageUrl}
-              alt={recipe.title}
-              fill
-              className="object-cover transition-all duration-500 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement
-                target.style.display = 'none'
-                const placeholder = target.parentElement?.querySelector('.image-placeholder') as HTMLElement
-                if (placeholder) {
-                  placeholder.style.display = 'flex'
-                }
-              }}
-            />
-          ) : null}
+          {(() => {
+            const imageSrc = convertToPlaceholder(recipe.imageUrl, recipe.title)
+            return imageSrc ? (
+              <Image
+                src={imageSrc}
+                alt={recipe.title}
+                fill
+                className="object-cover transition-all duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.style.display = 'none'
+                  const placeholder = target.parentElement?.querySelector('.image-placeholder') as HTMLElement
+                  if (placeholder) {
+                    placeholder.style.display = 'flex'
+                  }
+                }}
+              />
+            ) : null
+          })()}
           <div className={`absolute inset-0 flex items-center justify-center ${recipe.imageUrl ? 'image-placeholder hidden' : ''}`}>
             <div className="text-center">
               <ImageIcon className="h-12 w-12 text-muted-foreground/50 mx-auto mb-2" />
@@ -136,6 +176,18 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
               </div>
             )}
           </div>
+          {/* Bouton Ajouter à la liste de courses */}
+          {recipe.missing > 0 && recipe.missingIngredients && recipe.missingIngredients.length > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="mt-3 w-full gap-2"
+              onClick={handleAddToShoppingList}
+            >
+              <ShoppingCart className="h-4 w-4" />
+              Ajouter à la liste
+            </Button>
+          )}
         </CardContent>
       </Link>
     </Card>

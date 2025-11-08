@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { ImageIcon } from 'lucide-react'
 import { useState } from 'react'
+import { convertToPlaceholder } from '@/lib/utils'
 
 interface RecipeImageProps {
   src: string | null | undefined
@@ -26,8 +27,11 @@ export function RecipeImage({
   height
 }: RecipeImageProps) {
   const [hasError, setHasError] = useState(false)
+  
+  // Convertir les URLs Unsplash en placeholders
+  const imageSrc = convertToPlaceholder(src, alt)
 
-  if (!src || hasError) {
+  if (!imageSrc || hasError) {
     return (
       <div className={`relative ${fill ? 'absolute inset-0' : ''} ${!fill && width && height ? `w-[${width}px] h-[${height}px]` : ''} bg-muted flex items-center justify-center ${className}`}>
         <div className="text-center">
@@ -42,7 +46,7 @@ export function RecipeImage({
     return (
       <div className="relative w-full h-full">
         <Image
-          src={src}
+          src={imageSrc}
           alt={alt}
           fill
           className={className}
@@ -56,7 +60,7 @@ export function RecipeImage({
 
   return (
     <Image
-      src={src}
+      src={imageSrc}
       alt={alt}
       width={width || 800}
       height={height || 600}

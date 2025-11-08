@@ -50,11 +50,16 @@ const recipeImageMap: Record<string, string> = {
   'riz': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
   'riz aux légumes': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
   'riz cantonais': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
+  'riz à la tomate': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
+  'riz au beurre': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
+  'riz aux œufs': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
+  'riz aux oeufs': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
   
   // Soupes
   'soupe': 'https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80',
   'soupe de légumes': 'https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80',
   'soupe à la tomate': 'https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80',
+  'soupe miso': 'https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80',
   
   // Gratins
   'gratin': 'https://images.unsplash.com/photo-1574672290893-f761799b5447?w=800&h=600&fit=crop&q=80',
@@ -67,18 +72,10 @@ const recipeImageMap: Record<string, string> = {
   'sandwich au fromage': 'https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80',
   'sandwich thon-mayonnaise': 'https://images.unsplash.com/photo-1528735602780-2552fd46c7fe?w=800&h=600&fit=crop&q=80',
   
-  // Riz variantes
-  'riz à la tomate': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
-  'riz au beurre': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
-  'riz aux œufs': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
-  'riz aux oeufs': 'https://images.unsplash.com/photo-1512058564366-bb876779402f?w=800&h=600&fit=crop&q=80',
-  
   // Pommes de terre
   'pommes de terre sautées': 'https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80',
   'pommes de terre à l\'eau': 'https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80',
-  
-  // Soupes variantes
-  'soupe miso': 'https://images.unsplash.com/photo-1547592180-85f173990a49?w=800&h=600&fit=crop&q=80',
+  'purée de pommes de terre': 'https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=800&h=600&fit=crop&q=80',
   
   // Currys
   'curry de légumes': 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=600&fit=crop&q=80',
@@ -93,13 +90,13 @@ const recipeImageMap: Record<string, string> = {
   'ramen': 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&q=80',
   
   // Crêpes et pancakes
-  'pancakes': 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop&q=80',
-  'crêpes': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
-  'crepes': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
-  'crêpes sucrées': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
-  'crepes sucrees': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
-  'crêpes salées': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
-  'crepes salees': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
+  'pancakes': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crêpes': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crepes': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crêpes sucrées': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crepes sucrees': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crêpes salées': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
+  'crepes salees': 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop&q=80',
 }
 
 /**
@@ -150,17 +147,10 @@ function extractKeywords(title: string): string[] {
 
 /**
  * Génère une URL Unsplash basée sur des mots-clés
- * Utilise l'API Unsplash avec un access key public (gratuit)
- * Note: Pour la production, vous devriez utiliser votre propre access key
+ * Utilise des IDs d'images spécifiques basés sur les mots-clés
  */
 function getUnsplashImageByKeywords(keywords: string[]): string {
-  const query = keywords.join(',')
-  // Utiliser l'API Unsplash avec un access key public
-  // Format: https://api.unsplash.com/photos/random?query={query}&client_id={access_key}
-  // Pour simplifier, on utilise des IDs d'images spécifiques basés sur les mots-clés
-  
-  // Mapping de mots-clés vers des IDs d'images Unsplash spécifiques (libres de droit)
-  // Images plus précises et variées pour éviter les doublons
+  // Mapping de mots-clés vers des URLs Unsplash avec IDs spécifiques
   const keywordImageMap: Record<string, string> = {
     'œufs': 'https://images.unsplash.com/photo-1611859266236-9c81194a6d0e?w=800&h=600&fit=crop&q=80',
     'oeufs': 'https://images.unsplash.com/photo-1611859266236-9c81194a6d0e?w=800&h=600&fit=crop&q=80',
@@ -198,4 +188,3 @@ function getUnsplashImageByKeywords(keywords: string[]): string {
   // Image par défaut de nourriture (libre de droit)
   return 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80'
 }
-

@@ -3,10 +3,15 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ThemeToggle } from './ThemeToggle'
-import { Sparkles } from 'lucide-react'
+import { Button } from './ui/button'
+import { Sparkles, Heart, ShoppingCart } from 'lucide-react'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useShoppingList } from '@/hooks/useShoppingList'
 
 export function Header() {
   const router = useRouter()
+  const { favorites } = useFavorites()
+  const { count } = useShoppingList()
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -34,7 +39,27 @@ export function Header() {
           </span>
         </Link>
         
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          <Link href="/favorites">
+            <Button variant="ghost" size="icon" className="relative h-10 w-10">
+              <Heart className="h-5 w-5" />
+              {favorites.length > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-red-500 text-white text-xs font-bold flex items-center justify-center">
+                  {favorites.length > 9 ? '9+' : favorites.length}
+                </span>
+              )}
+            </Button>
+          </Link>
+          <Link href="/shopping-list">
+            <Button variant="ghost" size="icon" className="relative h-10 w-10">
+              <ShoppingCart className="h-5 w-5" />
+              {count > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center">
+                  {count > 9 ? '9+' : count}
+                </span>
+              )}
+            </Button>
+          </Link>
           <ThemeToggle />
         </div>
       </div>

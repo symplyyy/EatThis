@@ -6,6 +6,7 @@ import { supabaseServer } from '@/lib/supabaseServer'
 import { IngredientIcon } from '@/lib/ingredientIcons'
 import { RecipeImage } from '@/components/RecipeImage'
 import { RecipeTimer } from '@/components/RecipeTimer'
+import { RecipeIngredientsList } from '@/components/RecipeIngredientsList'
 import type { RecipeFull } from '@/lib/types'
 
 async function getRecipe(id: number): Promise<RecipeFull | null> {
@@ -96,11 +97,11 @@ export default async function RecipePage({ params }: { params: { id: string } })
               <ChefHat className="h-10 w-10 text-muted-foreground" />
             </div>
             <h1 className="text-3xl font-bold">Recette introuvable</h1>
-            <p className="text-muted-foreground text-lg">La recette demandée n'existe pas.</p>
+            <p className="text-muted-foreground text-lg">La recette demandée n&apos;existe pas.</p>
             <Link href="/">
               <Button variant="default" size="lg" className="mt-4">
                 <ArrowLeft className="mr-2 h-5 w-5" />
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Button>
             </Link>
           </div>
@@ -173,37 +174,11 @@ export default async function RecipePage({ params }: { params: { id: string } })
           {/* Colonne principale - Ingrédients et Étapes */}
           <div className="lg:col-span-2 space-y-6">
             {/* Ingrédients */}
-            <Card className="animate-fade-in-up-fast">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <ListChecks className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-2xl">Ingrédients</CardTitle>
-                </div>
-                <CardDescription className="text-base mt-2">
-                  {recipe.ingredients.length} ingrédient{recipe.ingredients.length > 1 ? 's' : ''} nécessaire{recipe.ingredients.length > 1 ? 's' : ''}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {recipe.ingredients.map((ingredient, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 hover:bg-muted transition-all duration-300 ease-in-out group"
-                    >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-background flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <IngredientIcon name={ingredient} size="text-2xl" />
-                      </div>
-                      <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors duration-300">
-                        {ingredient}
-                      </span>
-                      <CheckCircle2 className="h-5 w-5 text-muted-foreground/50 group-hover:text-primary transition-colors duration-300" />
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <RecipeIngredientsList
+              ingredients={recipe.ingredients}
+              recipeId={recipe.id}
+              recipeTitle={recipe.title}
+            />
 
             {/* Étapes de préparation */}
             <Card className="animate-fade-in-up-fast" style={{ animationDelay: '100ms' }}>

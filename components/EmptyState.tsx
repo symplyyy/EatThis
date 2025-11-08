@@ -66,7 +66,7 @@ export function EmptyState({ type, onReset, onBackHome }: EmptyStateProps) {
                 onClick={onBackHome}
                 className="min-w-[120px]"
               >
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Button>
             )}
           </div>

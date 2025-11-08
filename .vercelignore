@@ -1,0 +1,14 @@
+# Fichiers à ignorer lors du déploiement sur Vercel
+scripts/
+*.md
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!next.config.js
+!tailwind.config.ts
+!postcss.config.js
+.env.local
+.env.example
+node_modules/
+

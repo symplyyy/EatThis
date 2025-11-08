@@ -5,6 +5,27 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+/**
+ * Convertit une URL en placeholder si nécessaire (fallback uniquement)
+ * Utilise le titre de la recette pour générer un placeholder personnalisé
+ */
+export function convertToPlaceholder(imageUrl: string | null | undefined, title?: string): string | null {
+  if (!imageUrl) return null
+  
+  // Si c'est déjà un placeholder, on le retourne tel quel
+  if (imageUrl.includes('via.placeholder.com')) {
+    return imageUrl
+  }
+  
+  // Si c'est une URL Unsplash, on la garde telle quelle (pas de conversion)
+  if (imageUrl.includes('unsplash.com') || imageUrl.includes('images.unsplash.com') || imageUrl.includes('source.unsplash.com')) {
+    return imageUrl
+  }
+  
+  // Sinon, on retourne l'URL originale
+  return imageUrl
+}
+
 // Normaliser les noms d'ingrédients (trim, lower, gestion accents et ligatures)
 // Extrait uniquement le nom de base de l'ingrédient (ex: "mozzarella slice" -> "mozzarella")
 export function normalizeIngredientName(name: string): string {

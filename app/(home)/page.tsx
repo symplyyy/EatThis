@@ -24,6 +24,7 @@ export default function Home() {
   const [showSearch, setShowSearch] = useState(false)
   const [timeFilter, setTimeFilter] = useState<'all' | 'fast' | 'medium' | 'slow'>('all')
   const [difficultyFilter, setDifficultyFilter] = useState<'all' | 1 | 2 | 3>('all')
+  const [dietFilter, setDietFilter] = useState<'all' | 'vegetarian' | 'vegan' | 'gluten-free'>('all')
   const searchSectionRef = useRef<HTMLDivElement>(null)
 
   // Écouter l'événement de réinitialisation depuis le Header
@@ -38,6 +39,7 @@ export default function Home() {
       setIsLoading(false)
       setTimeFilter('all')
       setDifficultyFilter('all')
+      setDietFilter('all')
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
@@ -102,6 +104,35 @@ export default function Home() {
         )
       }
       
+      // Appliquer le filtre de régime (basique - basé sur le titre et les ingrédients manquants)
+      if (dietFilter !== 'all') {
+        filtered = filtered.filter((recipe) => {
+          const title = recipe.title.toLowerCase()
+          const missing = recipe.missingIngredients || []
+          const allIngredients = [...ingredients, ...missing].map(i => i.toLowerCase())
+          
+          if (dietFilter === 'vegetarian') {
+            // Vérifier si la recette contient des viandes/poissons
+            const nonVeg = ['poulet', 'boeuf', 'porc', 'saumon', 'thon', 'viande', 'poisson', 'jambon', 'bacon', 'lardons']
+            return !nonVeg.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+          }
+          
+          if (dietFilter === 'vegan') {
+            // Vérifier si la recette contient des viandes/poissons ou produits laitiers/œufs
+            const nonVegan = ['poulet', 'boeuf', 'porc', 'saumon', 'thon', 'viande', 'poisson', 'jambon', 'bacon', 'lardons', 'fromage', 'lait', 'beurre', 'crème', 'œuf', 'oeuf']
+            return !nonVegan.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+          }
+          
+          if (dietFilter === 'gluten-free') {
+            // Vérifier si la recette contient du gluten
+            const gluten = ['pâtes', 'pates', 'spaghetti', 'pain', 'farine', 'blé', 'froment']
+            return !gluten.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+          }
+          
+          return true
+        })
+      }
+      
       setRecipes(filtered)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Une erreur est survenue')
@@ -110,7 +141,7 @@ export default function Home() {
     } finally {
       setIsLoading(false)
     }
-  }, [ingredients])
+  }, [ingredients, timeFilter, difficultyFilter, dietFilter])
 
   // Fonction pour appliquer les filtres sur les résultats
   const applyFilters = useCallback((recipesToFilter: RecipeCardType[] = allRecipes) => {
@@ -134,15 +165,44 @@ export default function Home() {
       )
     }
     
+    // Appliquer le filtre de régime (basique - basé sur le titre et les ingrédients manquants)
+    if (dietFilter !== 'all') {
+      filtered = filtered.filter((recipe) => {
+        const title = recipe.title.toLowerCase()
+        const missing = recipe.missingIngredients || []
+        const allIngredients = [...ingredients, ...missing].map(i => i.toLowerCase())
+        
+        if (dietFilter === 'vegetarian') {
+          // Vérifier si la recette contient des viandes/poissons
+          const nonVeg = ['poulet', 'boeuf', 'porc', 'saumon', 'thon', 'viande', 'poisson', 'jambon', 'bacon', 'lardons']
+          return !nonVeg.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+        }
+        
+        if (dietFilter === 'vegan') {
+          // Vérifier si la recette contient des viandes/poissons ou produits laitiers/œufs
+          const nonVegan = ['poulet', 'boeuf', 'porc', 'saumon', 'thon', 'viande', 'poisson', 'jambon', 'bacon', 'lardons', 'fromage', 'lait', 'beurre', 'crème', 'œuf', 'oeuf']
+          return !nonVegan.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+        }
+        
+        if (dietFilter === 'gluten-free') {
+          // Vérifier si la recette contient du gluten
+          const gluten = ['pâtes', 'pates', 'spaghetti', 'pain', 'farine', 'blé', 'froment']
+          return !gluten.some(ing => title.includes(ing) || allIngredients.some(a => a.includes(ing)))
+        }
+        
+        return true
+      })
+    }
+    
     setRecipes(filtered)
-  }, [timeFilter, difficultyFilter, allRecipes])
+  }, [timeFilter, difficultyFilter, dietFilter, allRecipes, ingredients])
 
   // Réappliquer les filtres quand ils changent
   useEffect(() => {
     if (allRecipes.length > 0 && hasSearched) {
       applyFilters()
     }
-  }, [timeFilter, difficultyFilter, applyFilters, allRecipes.length, hasSearched])
+  }, [timeFilter, difficultyFilter, dietFilter, applyFilters, allRecipes.length, hasSearched])
 
   useEffect(() => {
     if (ingredients.length === 0) {
@@ -273,9 +333,9 @@ export default function Home() {
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
                     {recipes.length} recette{recipes.length > 1 ? 's' : ''} trouvée{recipes.length > 1 ? 's' : ''}
                   </h2>
-                  {hasSearched && (timeFilter !== 'all' || difficultyFilter !== 'all') && (
+                  {hasSearched && (timeFilter !== 'all' || difficultyFilter !== 'all' || dietFilter !== 'all') && (
                     <p className="text-sm text-muted-foreground">
-                      Filtres actifs : {timeFilter !== 'all' && 'Temps'} {timeFilter !== 'all' && difficultyFilter !== 'all' && '•'} {difficultyFilter !== 'all' && 'Difficulté'}
+                      Filtres actifs : {timeFilter !== 'all' && 'Temps'} {timeFilter !== 'all' && (difficultyFilter !== 'all' || dietFilter !== 'all') && '•'} {difficultyFilter !== 'all' && 'Difficulté'} {difficultyFilter !== 'all' && dietFilter !== 'all' && '•'} {dietFilter !== 'all' && 'Régime'}
                     </p>
                   )}
                 </div>
@@ -293,18 +353,20 @@ export default function Home() {
                   className="flex items-center gap-2"
                 >
                   <ArrowRight className="h-4 w-4 rotate-180" />
-                  Retour à l'accueil
+                  Retour à l&apos;accueil
                 </Button>
               </div>
               
-              {hasSearched && allRecipes.length > 0 && (
-                <RecipeFilters
-                  timeFilter={timeFilter}
-                  difficultyFilter={difficultyFilter}
-                  onTimeFilterChange={setTimeFilter}
-                  onDifficultyFilterChange={setDifficultyFilter}
-                />
-              )}
+                    {hasSearched && allRecipes.length > 0 && (
+                      <RecipeFilters
+                        timeFilter={timeFilter}
+                        difficultyFilter={difficultyFilter}
+                        dietFilter={dietFilter}
+                        onTimeFilterChange={setTimeFilter}
+                        onDifficultyFilterChange={setDifficultyFilter}
+                        onDietFilterChange={setDietFilter}
+                      />
+                    )}
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6">
                 {recipes.map((recipe, index) => (
